@@ -10,11 +10,15 @@
 
 <body>
   <h1>Article List</h1>
-  <li>
-    <ul>yeah</ul>
-    <ul>yeah yeah</ul>
-    <ul>yeah yean yeah</ul>
-  </li>
+  <div class="articles">
+    {% for article in articles %}
+      <div class="article">
+        <h2><a href="#">{{article.title}}</a></h2>
+        <p>{{article.snippet}}</p>
+        <p>{{article.date}}</p>
+      </div>
+    {% endfor %}
+  </div>
 </body>
 
 </html>
